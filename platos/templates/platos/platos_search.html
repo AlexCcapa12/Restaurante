@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buscador de platillos</title>
+</head>
+<body>
+<title>Platillos</title><h1 class="title">Buscador de platillos</h1>
+
+<form action="" method="GET">
+        <label>Búsqueda: </label>
+        <input type="text" name="q" value="{{query|escape}}">
+    </form>
+
+    {% if query %}
+        <h2>Resultado para "{{ query|escape }}"</h2>
+
+        {% if data %}
+            <ul>
+                {% for platos in data %}
+                    <li>{{ platos.nombre }} que es de {{ platos.procedencia }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No se han encontrado platos</p>
+        {% endif %}
+    {% endif %}
+
+</body>
+</html>

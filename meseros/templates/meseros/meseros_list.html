@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meseros</title>
+</head>
+<body>
+
+<h1 class="title">Gestor de meseros</h1>
+
+    <div>
+        <ul>
+        {% for meseros in data %}
+
+            <li>
+                <p>el mesero de edad {{ meseros.edad }} viene de {{ meseros.procedencia }}</p>
+            </li>
+
+        {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>

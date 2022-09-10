@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Platillos</title><h1 class="title">Gestor de platos</h1>
+
+    <div>
+        <ul>
+        {% for platos in data %}
+
+            <li>
+                <p>el platillo {{ platos.nombre }} viene de {{ platos.procedencia }}</p>
+            </li>
+
+        {% endfor %}
+        </ul>
+    </div>
+</head>
+<body>
+
+
+
+</body>
+</html>
